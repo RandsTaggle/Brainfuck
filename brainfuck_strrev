@@ -1,0 +1,16 @@
+>,[>,]<[>>[>]>[>]+[<]<[<]<[>>[>]>[>]<+[<]<[<]<-]>->[>]>[>]<-[<]<[<]<]>>[>]>[.>]
+--------------------------------------------------------------------------------
+>,[>,]<					|	Lecture d'une chaîne de caractères
+[						|	Boucle de réversion
+	[>]>[>]>[>]+		|	Prépare le caractère de copie
+	[<]<[<]<			|	Retourne au caractère à copier
+	[					|	Boucle de copie d'un caractère
+		[>]>[>]>[>]<+	|	Va au caractère copiant et l'incrémente
+		[<]<[<]<-		|	Va au caractère copié et le décrémente
+	]					|	Fin de copie
+	>-					|	Passe l'ancienne fin de chaîne à -1
+						|	(le caractère copié vaut maintenant zéro)
+	>[>]>[>]<-			|	Retire la préparation de copie
+	[<]<[<]<			|	Passe au caractère suivant à copier
+]						|	Fin de la boucle de réversion
+>>[>]>[.>]				|	Affichage de la chaîne renversée
